@@ -1,0 +1,1050 @@
+<Button@Button>:
+    background_normal: ''
+    background_color: 134/255, 194/255, 50/255, 1
+
+    # RENGİ TAM AYIRMADI UYGULANICAKSA BAŞKA BİR RENK SEÇİLMELİ
+
+    canvas:
+        Color:     
+            rgb: 71/255, 75/255, 79/255
+        Line:
+            width: 1.5
+            rectangle: self.x, self.y, self.width, self.height
+
+<CreateAccountWindow>:
+    name: "create"
+
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+            Label:
+                text: "COVID-1773"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1.05}
+                font_size: (root.width**2 + root.height**2) / 12**4
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":0.95}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.85}
+                text: "Name"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                size_hint: 0.8, 0.06
+                pos_hint: {"x":0.1, "top":0.75}
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.7}
+                text: "Email"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.1, "top":0.6}
+                size_hint: 0.8, 0.06
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.55}
+                text: "Password"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.1, "top":0.45}
+                size_hint: 0.8, 0.06
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.4,"y":0.05}
+            size_hint: 0.2, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+                
+<DetailedForm>:
+    name: "detailed"
+
+    job: jobb
+    transportation: transportationn
+    exercise: exercisee
+    
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "COVID-1773"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1.05}
+                font_size: (root.width**2 + root.height**2) / 12**4
+
+            Label:
+                text: "Detailed Informations"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":0.95}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.85}
+                text: "Transportation"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.1, "top":0.75}
+                size_hint: 0.8, 0.06
+                id: transportationn
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.7}
+                text: "Your Job"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.1, "top":0.6}
+                size_hint: 0.8, 0.06
+                id: jobb 
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0.25, "top":0.55}
+                text: "Exercise"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.1, "top":0.45}
+                size_hint: 0.8, 0.06
+                id: exercisee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.4,"y":0.05}
+            size_hint: 0.2, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+    
+
+
+<LoginWindow>:
+    name: "login"
+
+    email: email
+    password: password
+
+    FloatLayout:
+
+        Label:
+            text:"COVID-1773"
+            font_size: (root.width**2 + root.height**2) / 12**4
+            pos_hint: {"x":0.3, "top":1.02}
+            size_hint: 0.4, 0.15
+
+        Label:
+            text:"Email"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.3, "top":0.85}
+            size_hint: 0.4, 0.15
+
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.1 , "top":0.75}
+            size_hint: 0.8, 0.08
+
+        Label:
+            text:"Password"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.3, "top":0.65}
+            size_hint: 0.4, 0.15
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.3, "top":0.55}
+            size_hint: 0.4, 0.08
+
+        Button:
+            pos_hint:{"x":0.4,"y":0.05}
+            size_hint: 0.2, 0.08
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Login"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.loginBtn()
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Don't have an Account? Create One"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+<MainWindow>               
+
+    FloatLayout:
+        cols:1
+        halign: "center"
+        valign: "middle"
+
+        # FİRST COLOUM
+
+        FloatLayout:
+            size: root.width, root.height
+
+            Button:
+                text: "COVID 1773"
+                size_hint: (root.uch*8)/9, root.leng
+                background_normal: ''
+                background_color: 97/255, 137/255, 47/255, 1
+                pos_hint: {"x": root.space, "top":1 - root.space}
+
+
+            Button:
+                text: "USER"
+                size_hint: (root.uch*8)/9, root.leng
+                pos_hint: {"x": 1 - (root.uch*8)/9 - root.space, "top":1 - root.space}  
+                id: btn
+                on_release: dropdown.open(self)
+                
+                    
+
+
+            DropDown:
+
+                id: dropdown
+                # on_select: btn.text = '{}'.format(args[1])  
+
+                Button:
+                    text: "USER İNFORMATİON"
+                    size_hint_y:None 
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")
+                        
+
+                Button:
+                    text: "SETTİNGS"
+                    size_hint_y: None
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")   
+
+                Button:
+                    text: "LOG OUT"
+                    size_hint_y: None
+                    height: '50dp'
+                    on_release:
+                        root.switch_to("login")
+
+
+
+        # SECOND COLOUM
+
+        FloatLayout:
+            cols: 1
+
+            Button:
+                text: "PERSONAL STATISTICS"    
+                size_hint: 1 - 2*root.space, root.leng*3.5
+                pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space } 
+
+
+
+
+        # THIRD COLOUM
+
+        FloatLayout:
+            cols: 1
+            Label:
+                text: "NAVBAR"
+                size_hint: 1 - 2*root.space, root.leng*0.5
+                pos_hint: {"x": root.space, "top": root.leng*4 + 3*root.space}
+                    
+        # FOURTH COLOUM
+        
+        FloatLayout:
+            cols: 2
+            
+
+            Button:
+                text: "            HEALTH\n MINISTRY STATISTICS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*3.5 + 2*root.space }    
+                on_release:
+                    root.switch_to("health")
+                    
+                        
+            Button:
+                text: "RISKY CONDITIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*3.5 + 2*root.space }
+                on_release:
+                    root.switch_to("risk")
+                    
+                    
+            Button:
+                text: "NEWS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*2.25 + root.space }
+                on_release:
+                    root.switch_to("news")
+                    
+
+            Button:
+                text: "SUGGESTIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*2.25 + root.space }        
+                on_release:
+                    root.switch_to("suggestions")
+
+
+        # FIFTH COLOUM
+
+        FloatLayout:
+            cols: 2
+
+            Button:
+                text: "CONTACT US"
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x":1 - (root.uch*7)/9 - root.space , "top": root.leng } 
+
+            Button:
+                text: "ABOUT US"   
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x": root.space, "top": root.leng}  
+
+<HealthMSWindow>
+     
+    FloatLayout:
+        cols:1
+        halign: "center"
+        valign: "middle"
+
+        # FİRST COLOUM
+
+        FloatLayout:
+            size: root.width, root.height
+
+            Button:
+                text: "COVID 1773"
+                size_hint: (root.uch*8)/9, root.leng
+                background_normal: ''
+                background_color: 97/255, 137/255, 47/255, 1
+                pos_hint: {"x": root.space, "top":1 - root.space}
+                on_release:
+                    root.switch_to("main")
+
+            Button:
+                text: "USER"
+                size_hint: (root.uch*8)/9, root.leng
+                pos_hint: {"x": 1 - (root.uch*8)/9 - root.space, "top":1 - root.space}   
+                id: btn
+                on_release: dropdown.open(self)
+                
+                    
+
+
+            DropDown:
+
+                id: dropdown
+                # on_select: btn.text = '{}'.format(args[1])  
+
+                Button:
+                    text: "USER İNFORMATİON"
+                    size_hint_y:None 
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")
+                        
+
+                Button:
+                    text: "SETTİNGS"
+                    size_hint_y: None
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")   
+
+                Button:
+                    text: "LOG OUT"
+                    size_hint_y: None
+                    height: '50dp'
+                    on_release:
+                        root.switch_to("login")      
+
+
+        # SECOND COLOUM
+
+        FloatLayout:
+            cols: 1
+
+            FloatLayout:
+
+                cols: 2
+
+                # First row
+
+                Label:
+                    text: "Statistic Data Name"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space }
+
+                Label:
+                    text: "Data"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng - 2*root.space } 
+
+                #second row
+
+                Label:
+                    text: "Turkey Total Recovery:"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*1.5 - 2*root.space } 
+
+                Label:
+                    text: root.turkey_recovery + " people"    
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*1.5 - 2*root.space }   
+
+                #third row
+
+                Label:
+                    text: "Turkey Total Cases:"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*2 - 2*root.space }
+
+                Label:
+                    text: root.turkey_total_cases + " people"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*2 - 2*root.space } 
+
+                #fourth row
+
+                Label:
+                    text: "Turkey Total Death"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*2.5 - 2*root.space } 
+
+                Label:
+                    text: root.turkey_death + " people"  
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*2.5 - 2*root.space } 
+
+                #fifth row
+
+                Label:
+                    text: "Global Recovery"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*3 - 2*root.space } 
+
+                Label:
+                    text: root.global_recovery + " people"  
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*3 - 2*root.space }   
+
+                #sixth row
+
+                Label:
+                    text: "Global Cases"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*3.5 - 2*root.space }
+
+                Label:
+                    text: root.global_total_cases + " people"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*3.5 - 2*root.space } 
+
+                #seventh row
+
+                Label:
+                    text: "Global Death"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": root.space, "top":1 - root.leng*4 - 2*root.space } 
+
+                Label:
+                    text: root.global_death + " people"   
+                    text_size: self.size
+                    valign: "center"
+                    halign: "center" 
+                    size_hint: (1 - 2*root.space)/2, root.leng*.5
+                    pos_hint: {"x": .5, "top":1 - root.leng*4 - 2*root.space }                   
+                    
+
+
+
+
+        # THIRD COLOUM
+
+        FloatLayout:
+            cols: 1
+            Label:
+                text: "NAVBAR"
+                size_hint: 1 - 2*root.space, root.leng*0.5
+                pos_hint: {"x": root.space, "top": root.leng*4 + 3*root.space}
+                    
+        # FOURTH COLOUM
+        
+        FloatLayout:
+            cols: 2
+            
+
+            Button:
+                text: "            HEALTH\n MINISTRY STATISTICS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*3.5 + 2*root.space }    
+                on_release:
+                    root.switch_to("health")
+                    
+            Button:
+                text: "RISKY CONDITIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*3.5 + 2*root.space }
+                on_release:
+                    root.switch_to("risk")
+                    
+            Button:
+                text: "NEWS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*2.25 + root.space }
+                on_release:
+                    root.switch_to("news")
+
+            Button:
+                text: "SUGGESTIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*2.25 + root.space }        
+                on_release:
+                    root.switch_to("suggestions")
+
+
+        # FIFTH COLOUM
+
+        FloatLayout:
+            cols: 2
+
+            Button:
+                text: "CONTACT US"
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x":1 - (root.uch*7)/9 - root.space , "top": root.leng } 
+
+            Button:
+                text: "ABOUT US"   
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x": root.space, "top": root.leng}   
+                
+<RiskyConditionsWindow>
+     
+    FloatLayout:
+        cols:1
+        halign: "center"
+        valign: "middle"
+
+        # FİRST COLOUM
+
+        FloatLayout:
+            size: root.width, root.height
+
+            Button:
+                text: "COVID 1773"
+                size_hint: (root.uch*8)/9, root.leng
+                background_normal: ''
+                background_color: 97/255, 137/255, 47/255, 1
+                pos_hint: {"x": root.space, "top":1 - root.space}
+                on_release:
+                    root.switch_to("main")
+
+            Button:
+                text: "USER"
+                size_hint: (root.uch*8)/9, root.leng
+                pos_hint: {"x": 1 - (root.uch*8)/9 - root.space, "top":1 - root.space}  
+                id: btn
+                on_release: dropdown.open(self)
+                
+                    
+
+
+            DropDown:
+
+                id: dropdown
+                # on_select: btn.text = '{}'.format(args[1])  
+
+                Button:
+                    text: "USER İNFORMATİON"
+                    size_hint_y:None 
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")
+                        
+
+                Button:
+                    text: "SETTİNGS"
+                    size_hint_y: None
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")     
+
+                Button:
+                    text: "LOG OUT"
+                    size_hint_y: None
+                    height: '50dp'
+                    on_release:
+                        root.switch_to("login")
+
+
+        # SECOND COLOUM
+
+        FloatLayout:
+            cols: 1
+
+            Image:  
+                source: '1.jpg'
+                size_hint: 1 - 2*root.space, root.leng*3.5
+                pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space } 
+                
+
+
+        # THIRD COLOUM
+
+        FloatLayout:
+            cols: 1
+            Label:
+                text: "NAVBAR"
+                size_hint: 1 - 2*root.space, root.leng*0.5
+                pos_hint: {"x": root.space, "top": root.leng*4 + 3*root.space}
+                    
+        # FOURTH COLOUM
+        
+        FloatLayout:
+            cols: 2
+            
+
+            Button:
+                text: "            HEALTH\n MINISTRY STATISTICS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*3.5 + 2*root.space }    
+                on_release:
+                    root.switch_to("health")
+                    
+            Button:
+                text: "RISKY CONDITIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*3.5 + 2*root.space }
+                on_release:
+                    root.switch_to("risk")
+                    
+            Button:
+                text: "NEWS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*2.25 + root.space }
+                on_release:
+                    root.switch_to("news")
+
+            Button:
+                text: "SUGGESTIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*2.25 + root.space }        
+                on_release:
+                    root.switch_to("suggestions")
+
+
+        # FIFTH COLOUM
+
+        FloatLayout:
+            cols: 2
+
+            Button:
+                text: "CONTACT US"
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x":1 - (root.uch*7)/9 - root.space , "top": root.leng } 
+
+            Button:
+                text: "ABOUT US"   
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x": root.space, "top": root.leng}  
+
+<NewsWindow>
+     
+    FloatLayout:
+        cols:1
+        halign: "center"
+        valign: "middle"
+
+        # FİRST COLOUM
+
+        FloatLayout:
+            size: root.width, root.height
+
+            Button:
+                text: "COVID 1773"
+                size_hint: (root.uch*8)/9, root.leng
+                background_normal: ''
+                background_color: 97/255, 137/255, 47/255, 1
+                pos_hint: {"x": root.space, "top":1 - root.space}
+                on_release:
+                    root.switch_to("main")
+
+            Button:
+                text: "USER"
+                size_hint: (root.uch*8)/9, root.leng
+                pos_hint: {"x": 1 - (root.uch*8)/9 - root.space, "top":1 - root.space}  
+                id: btn
+                on_release: dropdown.open(self)
+                
+                    
+
+
+            DropDown:
+
+                id: dropdown
+                # on_select: btn.text = '{}'.format(args[1])  
+
+                Button:
+                    text: "USER İNFORMATİON"
+                    size_hint_y:None 
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")
+                        
+
+                Button:
+                    text: "SETTİNGS"
+                    size_hint_y: None
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")     
+
+                Button:
+                    text: "LOG OUT"
+                    size_hint_y: None
+                    height: '50dp'
+                    on_release:
+                        root.switch_to("login")
+
+        # SECOND COLOUM
+
+        FloatLayout:
+            cols: 1
+
+            FloatLayout:
+                # text: "NEWS WİNDOW"    
+                # size_hint: 1 - 2*root.space, root.leng*3.5
+                # pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space }
+                cols: 1
+
+                Label:
+                    text_size: self.size
+                    valign: "top"
+                    halign: "left"
+                    text: root.news_1_des    
+                    size_hint: (1 - 2*root.space), (root.leng*3.5)
+                    pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space } 
+                    
+
+                # Button:
+                #     text: "TO WEBSİTE"
+                #     size_hint: root.uch, root.leng*.3125
+                #     pos_hint: {"x": root.space  , "top":1 - root.leng*4 - 2*root.space }  
+                #     on_release:
+                #         newswind.text(news_2_des)
+
+
+
+
+
+
+        # THIRD COLOUM
+
+        FloatLayout:
+            cols: 1
+            Label:
+                text: "NAVBAR"
+                size_hint: 1 - 2*root.space, root.leng*0.5
+                pos_hint: {"x": root.space, "top": root.leng*4 + 3*root.space}
+                    
+        # FOURTH COLOUM
+        
+        FloatLayout:
+            cols: 2
+            
+
+            Button:
+                text: "            HEALTH\n MINISTRY STATISTICS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*3.5 + 2*root.space }    
+                on_release:
+                    root.switch_to("health")
+                    
+            Button:
+                text: "RISKY CONDITIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*3.5 + 2*root.space }
+                on_release:
+                    root.switch_to("risk")
+                    
+            Button:
+                text: "NEWS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*2.25 + root.space }
+                on_release:
+                    root.switch_to("news")
+
+            Button:
+                text: "SUGGESTIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*2.25 + root.space }        
+                on_release:
+                    root.switch_to("suggestions")
+
+
+        # FIFTH COLOUM
+
+        FloatLayout:
+            cols: 2
+
+            Button:
+                text: "CONTACT US"
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x":1 - (root.uch*7)/9 - root.space , "top": root.leng } 
+
+            Button:
+                text: "ABOUT US"   
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x": root.space, "top": root.leng}  
+
+<SuggestionsWindow>
+     
+    FloatLayout:
+        cols:1
+        halign: "center"
+        valign: "middle"
+
+        # FİRST COLOUM
+
+        FloatLayout:
+            size: root.width, root.height
+
+            Button:
+                text: "COVID 1773"
+                size_hint: (root.uch*8)/9, root.leng
+                background_normal: ''
+                background_color: 97/255, 137/255, 47/255, 1
+                pos_hint: {"x": root.space, "top":1 - root.space}
+                on_release:
+                    root.switch_to("main")
+
+            Button:
+                text: "USER"
+                size_hint: (root.uch*8)/9, root.leng
+                pos_hint: {"x": 1 - (root.uch*8)/9 - root.space, "top":1 - root.space}   
+                id: btn
+                on_release: dropdown.open(self)
+                
+                    
+
+
+            DropDown:
+
+                id: dropdown
+                # on_select: btn.text = '{}'.format(args[1])  
+
+                Button:
+                    text: "USER İNFORMATİON"
+                    size_hint_y:None 
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")
+                        
+
+                Button:
+                    text: "SETTİNGS"
+                    size_hint_y: None
+                    height: '50dp'
+                    # on_release: dropdown.select("user information")   
+
+                Button:
+                    text: "LOG OUT"
+                    size_hint_y: None
+                    height: '50dp'
+                    on_release:
+                        root.switch_to("login")
+
+
+        # SECOND COLOUM
+
+        FloatLayout:
+            cols: 1
+
+            Label:
+                text_size: self.size
+                valign: "top"
+                halign: "left"
+                text: "\n\n-Maintain at least a 1-metre distance between yourself and others\n\n-Make wearing a mask a normal part of being around other people. The appropriate use, storage and cleaning or disposal are essential to make masks as effective as possible."    
+                size_hint: 1 - 2*root.space, root.leng*3.5
+                pos_hint: {"x": root.space, "top":1 - root.leng - 2*root.space } 
+
+
+
+
+        # THIRD COLOUM
+
+        FloatLayout:
+            cols: 1
+            Label:
+                text: "NAVBAR"
+                size_hint: 1 - 2*root.space, root.leng*0.5
+                pos_hint: {"x": root.space, "top": root.leng*4 + 3*root.space}
+                    
+        # FOURTH COLOUM
+        
+        FloatLayout:
+            cols: 2
+            
+
+            Button:
+                text: "            HEALTH\n MINISTRY STATISTICS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*3.5 + 2*root.space }    
+                on_release:
+                    root.switch_to("health")
+                    
+            Button:
+                text: "RISKY CONDITIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*3.5 + 2*root.space }
+                on_release:
+                    root.switch_to("risk")
+                    
+            Button:
+                text: "NEWS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": root.space, "top": root.leng*2.25 + root.space }
+                on_release:
+                    root.switch_to("news")
+
+            Button:
+                text: "SUGGESTIONS"
+                size_hint: root.uch, root.leng*1.25
+                pos_hint: {"x": 1 - root.uch - root.space, "top": root.leng*2.25 + root.space }        
+                on_release:
+                    root.switch_to("suggestions")
+
+
+        # FIFTH COLOUM
+
+        FloatLayout:
+            cols: 2
+
+            Button:
+                text: "CONTACT US"
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x":1 - (root.uch*7)/9 - root.space , "top": root.leng } 
+
+            Button:
+                text: "ABOUT US"   
+                size_hint: (root.uch*7)/9, root.leng*.75
+                background_normal: ''
+                background_color: 107/255, 110/255, 112/255, 1
+                pos_hint: {"x": root.space, "top": root.leng}  
